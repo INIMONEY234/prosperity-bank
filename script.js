@@ -70,3 +70,23 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.auth-header').style.display = 'none';
     });
 });
+
+
+
+
+
+//hamburger menu logic 
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.nav-menu');
+
+menu.addEventListener('click', function() {
+    menu.classList.toggle('active');
+    menuLinks.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
+    menu.classList.remove('active');
+    menuLinks.classList.remove('active');
+})); 
+

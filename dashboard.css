@@ -112,10 +112,10 @@ header {
 /* 3. Mobile Devices (768px and below) */
 @media (max-width: 768px) {
     .dash-header {
-        flex-direction: column; /* Stack logo, title, and logout vertically */
-        gap: 15px;
+        flex-direction: row; /* Stack logo, title, and logout horizontally */
+        gap: 5px;
         text-align: center;
-        padding: 20px 5%;
+        padding: 10px 2%;
     }
 
     .dash-header h3 {

@@ -558,6 +558,82 @@ footer ul li:hover {
 
 
 
+/* Desktop: Hide the toggle button */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Show hamburger on mobile */
+        z-index: 1001;
+        position: fixed;
+        right: 5%; /* Hide menu off-screen to the right */
+        top: 8.5%;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 5px;
+        width: 6.5%;
+        padding-bottom: 20px;
+        padding-right: 10px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%; /* Hide menu off-screen to the left */
+        top: 0;
+        flex-direction: column;
+        background-color: #081a3d;
+        width: 95%;
+        height: 96vh;
+        text-align: center;
+        transition: 1.8s;
+        padding-top: 60px;
+        z-index: 1000;
+        display: flex;
+    }
+
+    /* Show menu when active class is added via JS */
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Optional: Hamburger to 'X' animation */
+    .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    
+    .nav-btns {
+        display: flex; /* Hide action buttons inside the menu or keep them separate */
+        justify-content: space-around;
+        gap: 20px; 
+    }
+}
+
+
+
+
+
+
+
+
 /* ================= RESPONSIVE STYLES ================= */
 
 /* Tablets and Small Laptops (1024px and below) */
