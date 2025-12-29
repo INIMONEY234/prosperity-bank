@@ -1,0 +1,171 @@
+body {
+  font-family: Poppins, sans-serif;
+  background: #f4f6fb;
+  margin: 0;
+}
+
+header {
+    background: #081a3d;
+    color: white;
+    padding: 1px 5px;
+}
+
+.dash-header {
+  color: #fff;
+  padding: 8px 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dash-header img {
+    width: 80px;
+    height: 50px;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.logo-name {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.dash-header h3 {
+    font-size: 1.6rem;
+}
+
+.btn-logout {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-logout:hover {
+    background: #eef3ff; 
+    color: #000;
+}
+
+.dashboard {
+  padding: 30px 5%;
+}
+
+.balance-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.dash-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dash-card:hover {
+    background: #081a3d;
+    color: #fff;
+}
+
+.transactions {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+/* ================= RESPONSIVE ADJUSTMENTS ================= */
+
+/* 1. Large Screen Container Limit (Optional but recommended) */
+.dashboard, .dash-header {
+    max-width: 1200px;
+    margin: 0 auto; /* Keeps the content centered on very wide monitors */
+}
+
+/* 2. Tablet & Small Laptops (1024px and below) */
+@media (max-width: 1024px) {
+    .dash-header {
+        padding: 8px 5%; /* Replaces the fixed 72px for better spacing */
+    }
+}
+
+/* 3. Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+    .dash-header {
+        flex-direction: column; /* Stack logo, title, and logout vertically */
+        gap: 15px;
+        text-align: center;
+        padding: 20px 5%;
+    }
+
+    .dash-header h3 {
+        font-size: 1.3rem;
+        order: 3; /* Positions the "Welcome" message at the bottom of the stack */
+    }
+
+    .btn-logout {
+        width: fit-content;
+        order: 2;
+    }
+
+    .dashboard {
+        padding: 20px 4%; /* More room for content on small screens */
+    }
+
+    .balance-card {
+        padding: 20px;
+        text-align: center; /* Center balance info for better mobile aesthetics */
+    }
+
+    .dash-grid {
+        /* Adjusting the grid to ensure cards are readable */
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+        gap: 15px;
+    }
+
+    .dash-card {
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+/* 4. Small Phones (480px and below) */
+@media (max-width: 480px) {
+    .dash-grid {
+        /* Switch to 2 columns or 1 column depending on preference */
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .logo-name {
+        font-size: 20px;
+    }
+
+    .dash-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .transactions {
+        padding: 15px;
+        overflow-x: auto; /* Ensures tables inside don't break the layout */
+    }
+}

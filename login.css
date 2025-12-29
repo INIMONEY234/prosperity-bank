@@ -1,0 +1,459 @@
+/* Using your provided Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #090b0e; /* Your Dark BG */
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Header - Match your provided Header CSS */
+.auth-header {
+    background: #081a3d; /* Your Deep Navy */
+    color: white;
+    padding: 15px 5%;
+    border-bottom: 1px solid rgba(238, 243, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-container img {
+    width: 80px;
+    height: 50px;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.btn-home {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none; 
+    margin: 0 100px 0 0;
+}
+
+.btn-home:hover {
+    background: #eef3ff; 
+    color: #000;
+}
+
+.logo-name {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+/* Login Card Layout */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.auth-card {
+    background: #ffffff;
+    color: #222; /* Your standard text color */
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.card-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-title h2 {
+    color: #081a3d;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.card-title p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Form Styling */
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #081a3d;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #081a3d;
+    outline: none;
+}
+
+.form-help {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+/* Buttons using your Primary Button Style */
+.btn-submit {
+    width: 100%;
+    background: #081a3d;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: #eef3ff; /* Your light blue hover */
+    color: #081a3d;
+    border: 1px solid #081a3d;
+}
+
+.text-link {
+    color: #081a3d;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.auth-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+
+
+
+/* --- SIGNUP & AUTH SPECIFIC COLORS --- */
+.auth-page {
+    background-color: #090b0e; /* Your Dark BG */
+}
+
+.auth-card {
+    background: #ffffff; /* White card for readability */
+    border: 2px solid #eef3ff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.card-title h2 { color: #081a3d; }
+
+/* Password Strength Meter Colors */
+.strength-meter { background-color: #eef3ff; }
+.weak { background-color: #ff4d4d; }
+.medium { background-color: #f39c12; }
+.strong { background-color: #081a3d; } /* Using your navy for strong */
+
+/* OTP Colors */
+.otp-input {
+    border: 2px solid #081a3d;
+    background: #eef3ff;
+    color: #081a3d;
+}
+
+
+
+/* --- DASHBOARD STYLES --- */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #090b0e;
+}
+
+.sidebar {
+    width: 260px;
+    background: #081a3d;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-nav {
+    margin-top: 50px;
+    flex-grow: 1;
+}
+
+.side-nav a {
+    display: block;
+    padding: 12px 15px;
+    color: #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.side-nav a.active, .side-nav a:hover {
+    background: #eef3ff;
+    color: #081a3d;
+    font-weight: 700;
+}
+
+.dashboard-main {
+    flex-grow: 1;
+    padding: 40px;
+    color: #fff;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #081a3d;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #ffffff;
+    color: #222;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #081a3d;
+}
+
+.stat-card.primary {
+    background: #081a3d;
+    color: #fff;
+    border-left: 5px solid #eef3ff;
+}
+
+.action-btn {
+    padding: 15px 25px;
+    background: #eef3ff;
+    border: none;
+    border-radius: 5px;
+    color: #081a3d;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.action-btn:hover {
+    background: #fff;
+}
+
+
+
+
+
+
+
+/* Modal Overlay Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(9, 11, 14, 0.9); /* Your Dark BG with transparency */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #081a3d;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Modal is shown when this class is added via JS */
+.modal-overlay.active {
+    display: flex;
+}
+
+/* Signup specific width adjustment */
+.signup-card {
+    max-width: 500px;
+}
+
+
+
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablets and Small Laptops (1024px and below) */
+@media (max-width: 1024px) {
+    .dashboard-main {
+        padding: 20px;
+    }
+    
+    .btn-home {
+        margin-right: 20px; /* Reduced from 100px */
+    }
+}
+
+/* Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+    /* --- Header Adjustment --- */
+    .nav-container {
+        flex-direction: row; /* Keep logo and button side by side */
+        justify-content: space-between;
+    }
+
+    .btn-home {
+        margin: 0; /* Remove that large right margin completely */
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .logo-name {
+        font-size: 20px;
+    }
+
+    /* --- Auth/Login Card --- */
+    .login-wrapper {
+        padding: 30px 15px; /* Less padding on the outside */
+    }
+
+    .auth-card {
+        padding: 25px; /* Less padding inside the card */
+    }
+
+    /* --- Dashboard Layout (The most important part) --- */
+    .dashboard-container {
+        flex-direction: column; /* Stacks sidebar on top of content */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+        padding: 20px;
+        order: 2; /* Moves sidebar below content OR keep at 1 to stay on top */
+    }
+
+    .side-nav {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for nav links */
+        gap: 10px;
+    }
+
+    .side-nav a {
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .dashboard-main {
+        order: 1; /* Content appears first on mobile */
+        padding: 25px 15px;
+    }
+
+    .dash-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    /* --- Stats and Buttons --- */
+    .stat-card {
+        margin-bottom: 15px;
+    }
+
+    .action-btn {
+        width: 100%; /* Buttons take full width on mobile */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Small Phones (480px and below) */
+@media (max-width: 480px) {
+    .side-nav {
+        grid-template-columns: 1fr; /* Stack nav links back to 1 column */
+    }
+
+    .card-title h2 {
+        font-size: 22px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+
+
+
+

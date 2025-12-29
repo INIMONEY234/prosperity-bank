@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Prosperity Bank</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./login.css"> 
+    <link rel="icon" type="image/png" href="./images/prosperity_bank_logo-2.png">
+</head>
+<body class="auth-page">
+
+    <header class="auth-header">
+        <div class="nav-container">
+            <div class="logo-name">
+                <img id="logo-image" src="./images/prosperity bank logo.png" alt="bank-logo" />
+                <h3>Prosperity Bank</h3>
+            </div>
+            <nav> 
+            <a href="index.html" class="btn-home">Home</a>  
+            </nav>
+        </div>
+    </header>
+
+    <main class="login-wrapper">
+        <div class="auth-card">
+            <div class="card-title">
+                <h2>Secure Login</h2>
+                <p>Enter your details to access your dashboard</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Account Number</label>
+                    <input type="text" id="loginId" placeholder="10-digit number" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="loginPassword" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-help">
+                    <label><input type="checkbox"> Remember ID</label>
+                    <a href="#" class="text-link">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn-submit" id="loginBtn">Login to Internet Banking</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>New to Prosperity Bank? <a href="signup.html" class="text-link">Open an Account</a></p>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <div class="modal-overlay" id="forgotPasswordModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Reset Password</h3>
+            <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+        <form id="forgotPasswordForm">
+            <p>Enter your registered email address to receive a reset link.</p>
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="name@example.com" required>
+            </div>
+            <button type="submit" class="btn-submit">Send Reset Link</button>
+        </form>
+    </div>
+</div>
+
+
+    <script src="auth.js"></script>
+</body>
+</html>

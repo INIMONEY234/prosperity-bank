@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Prosperity Bank</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="icon" type="image/png" href="./images/prosperity_bank_logo-2.png">
+</head>
+<body>
+    
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="dash-header">
+        <div class="logo-name">
+            <img id="logo-image" src="./images/prosperity bank logo.png" alt="bank-logo" />
+            <h3>Prosperity Bank</h3>
+        </div>
+        <nav> 
+        <a href="login.html" class="btn-logout">Logout</a>  
+        </nav>
+    </div>
+</header>
+
+
+<section class="dashboard">
+  <h2>Welcome, <span id="user-display-name">Valued Customer</span></h2>
+  <div class="account-status">Status: <span class="badge">Active</span></div>          
+  <div class="balance-card">
+    <h4>Account Balance</h4>
+    <h2>₦ 245,800.00</h2>
+    <small>Account: ****6789</small>
+                
+  </div>
+
+  <div class="dash-grid">
+    <div class="dash-card">💸 Transfer Funds</div>
+    <div class="dash-card">💳 Pay Bills</div>
+    <div class="dash-card">📄 Account Statement</div>
+    <div class="dash-card">🏦 Apply for Loan</div>
+  </div>
+
+  <div class="transactions">
+    <h4>Recent Transactions</h4>
+    <ul>
+      <li>₦20,000 - Transfer to John</li>
+      <li>₦5,000 - Airtime Purchase</li>
+      <li>₦50,000 - Salary Credit</li>
+    </ul>
+  </div>
+</section>
+
+<script src="auth.js"></script>
+</body>
+</html>
