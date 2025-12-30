@@ -76,17 +76,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //hamburger menu logic 
-const menu = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelector('.nav-menu');
+const menu = document.querySelector('#mobile-menu'); // The hamburger div
+const menuLinks = document.querySelector('.nav-menu'); // The slide-out nav
+const closeArrow = document.querySelector('#close-menu-arrow');
 
+// OPEN MENU
 menu.addEventListener('click', function() {
-    menu.classList.toggle('active');
-    menuLinks.classList.toggle('active');
+    // Adding 'active' to BOTH is the key
+    menu.classList.add('active'); 
+    menuLinks.classList.add('active');
 });
 
-// Close menu when a link is clicked
-document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
+// CLOSE MENU (via Arrow)
+closeArrow.addEventListener('click', function() {
     menu.classList.remove('active');
     menuLinks.classList.remove('active');
-})); 
-
+});
