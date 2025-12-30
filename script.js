@@ -76,19 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //hamburger menu logic 
-const menu = document.querySelector('#mobile-menu'); // The hamburger div
-const menuLinks = document.querySelector('.nav-menu'); // The slide-out nav
-const closeArrow = document.querySelector('#close-menu-arrow');
+const menuBtn = document.querySelector('#mobile-menu');
+const navMenu = document.querySelector('.nav-menu');
+const backArrow = document.querySelector('#close-menu-arrow');
 
-// OPEN MENU
-menu.addEventListener('click', function() {
-    // Adding 'active' to BOTH is the key
-    menu.classList.add('active'); 
-    menuLinks.classList.add('active');
+// When you click the 3 lines
+menuBtn.addEventListener('click', () => {
+    menuBtn.classList.add('active'); // This triggers the CSS to hide the 3 lines
+    navMenu.classList.add('active'); // This slides the menu in
 });
 
-// CLOSE MENU (via Arrow)
-closeArrow.addEventListener('click', function() {
-    menu.classList.remove('active');
-    menuLinks.classList.remove('active');
+// When you click the Back Arrow
+backArrow.addEventListener('click', () => {
+    menuBtn.classList.remove('active'); // This makes the 3 lines reappear
+    navMenu.classList.remove('active'); // This slides the menu out
 });

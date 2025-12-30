@@ -581,14 +581,23 @@ footer ul li:hover {
         z-index: 1001;
         position: fixed;
         right: 5%; /* Hide menu off-screen to the right */
-        top: 8.5%;
+        top: 7.5%;
         flex-direction: column;
         justify-content: space-around;
         gap: 5px;
         width: 6.5%;
         padding-bottom: 20px;
         padding-right: 10px;
-        opacity: 0.6;
+        opacity: 0.7;
+        transition: opacity 0.2s ease-out, visibility 0.2s ease-in;
+    }
+
+
+    /* THE FIX: Hide it when the menu is open */
+    .menu-toggle.active {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none; /* User can't click it while it's invisible */
     }
 
     .nav-menu {
@@ -604,6 +613,10 @@ footer ul li:hover {
         padding-top: 60px;
         z-index: 1000;
         display: flex;
+
+        transform: translateX(-100%);
+        /* Transition is only applied here, but display: none prevents it on load */
+        transition: transform 0.4s ease;
     }
 
     /* Show menu when active class is added via JS */
@@ -885,5 +898,26 @@ footer ul li:hover {
     /* Ensure the nav-menu is behind the toggle but in front of content */
     .nav-menu {
         z-index: 1000;
+    }
+}
+
+
+
+
+
+/* 1. Hide it for Desktop by default */
+.back-arrow-container {
+    display: none;
+}
+
+/* 2. Show it only on Mobile */
+@media (max-width: 768px) {
+    .back-arrow-container {
+        display: flex; /* Using flex to align the arrow and text */
+        align-items: center;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        cursor: pointer;
     }
 }
